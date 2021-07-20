@@ -1,0 +1,142 @@
+<html>
+
+<head>
+<title>Баги</title>
+</head>
+
+<body bgcolor="#FFFFFF" vlink="#0000FF">
+
+<p align="center">Тут мы собираем описания багов
+результаты деятельности которых вам предстоит
+проверить самостоятельно :)</p>
+
+<p align="center"><font color="#000000" face="Arial Cyr" size="3"><img src="../../../images/line_green.gif" width="90%" height="2"></font></p>
+
+<p><big>1.</big> <a href="pcbugzzz.htm#1.">Повесить РС при начальной
+загрузке.</a><br>
+<big>2.</big> <a href="pcbugzzz.htm#2.">Тот самый баг Intel Pentium.</a><br>
+<big>3.</big> <a href="pcbugzzz.htm#3.">Три байта потрясшие Win.</a><br>
+<big>4.</big> <a href="pcbugzzz.htm#4.">Без ведома Windows.</a><br>
+<big>5.</big> <a href="pcbugzzz.htm#5.">Windows не пропачен? Хорошо :-).</a><br>
+[продолжение следует]</p>
+
+<p><big><a name="1.">1.</a> Повесить PC при начальной
+загрузке.</big><br>
+<strong>From:</strong> Белый</p>
+
+<p>Строчка 'device=config.sys' в файле config.sys мертво вешает
+компьютер при начальной загрузке. Тоже действие
+производит строчка '@autoexec.bat' в файле autoexec.bat.
+Прежде чем иследовать данный пример, неплохо
+узнать как востанавливать работоспособность
+компьютера:<br>
+&nbsp;&nbsp;&nbsp; Если стоит Win'9x<br>
+&nbsp;&nbsp;&nbsp; 1.При загрузке жмем F8.<br>
+&nbsp;&nbsp;&nbsp; 2.Выбираем safe-mode.<br>
+&nbsp;&nbsp;&nbsp; 3.Удаляем из этих файлов соответсвущие
+строчки.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Приведеный пример может
+использоваться для предотвращения
+использования компьютера чайником в ваше
+отсутствие, а также для симулирования перед
+начальством неработоспособности оного. Для
+особо ленивых мною были написаны два bat-файла:<br>
+<a href="killmypc.zip">killmypc</a> - вставляет строчку в файл
+config.sys<br>
+<a href="lifemypc.zip">lifemypc</a> - удаляет эту строчку.</p>
+
+<p><big><a name="2.">2.</a> Тот самый баг Intel Pentium.</big><br>
+<strong>From:</strong> Белый</p>
+
+<p>&nbsp;&nbsp;&nbsp; Нашумевшая в свое время
+последовательность инструкций мертво вешающих
+некоторые процесоры Pentium и в связи с этим здорово
+подмочившая репутацию Intel выглядит так - lock cmpxchg8b
+eax.<br>
+&nbsp;&nbsp;&nbsp; В шестнацетеричном редакторе создайте
+файл с байтами F0 0F C7 C8 и вы получите com-файл с этим
+багом. В Pentium Pro и Pentium II этого бага уже нет.<br>
+&nbsp;&nbsp;&nbsp; Для ленивых bat-файл:<br>
+&nbsp;&nbsp;&nbsp; <a href="cpu_bug.zip">cpu_bug</a> - делает все
+вышеописанное.</p>
+
+<p><big><a name="3.">3.</a> Три байта потрясшие Win.</big><br>
+<strong>From:</strong> Maniac</p>
+
+<p>&nbsp;&nbsp;&nbsp; Не только потрясшей, но и трясущей до
+сих пор. По крайней мере Windows 98 (4.10.1998) вешается
+наглухо. Всего 3 байта создающие бесконечный цикл
+с запрещением внешних прерываний. Запустите <a href="killwin.zip">этот файл</a> и возможно вам понравится.
+Вы же для этого и зашли в этот раздел? :)</p>
+
+<p><big><a name="4.">4.</a> Без ведома Windows.</big><br>
+<strong>From:</strong> Kirik</p>
+
+<p>&nbsp;&nbsp;&nbsp; <a href="bugv.zip">Эта программка</a> написана
+под WINDOWS,и она переключает VGA карту в режим 13h без
+ведома WINDOWS. В общем, получается красиво. При
+перезагрузке всё возвращается на свои места.</p>
+
+<p><big><a name="5.">5.</a> Windows не пропачен? Хорошо :-).</big><br>
+<strong>From:</strong> Leo Chamardine</p>
+
+<p>Вот <a href="winhalt.zip">этот файл</a> (winhalt.bat) вешает
+непропаченый Windows стандартным набором F0 0F C7 C8 (но
+может и другим). Пропаченый Windows сообщает о
+некорректной операции и предлагает закрыть
+приложение. А прикол там в том, что этот
+нормальный BAT-файл делает нечто странное -
+пытается запустить себя, как COM, но это приводит
+не к непрдесказуемому результату, а к вполне
+ожидаемому. Если его посмотреть в дебаггере, то
+получится такой код:</p>
+
+<pre>;------ Начало BAT-файла
+    INC     AX               ; '@'
+    INC     BP               ; 'E'
+    INC     BX               ; 'C'
+    DEC     AX               ; 'H'
+    DEC     DI               ; 'O'
+    AND     [BX+46],CL       ; ' OF'
+    INC     SI               ; 'F'
+    OR      AX,520A          ; 0d, 0a, 'R'
+    INC     BP               ; 'E'
+    DEC     BP               ; 'M'
+    AND     [BX+46],CL       ; ' OF'</pre>
+
+<p>;-------- Здесь пошел рабочий код. Предыдущие
+инструкии никакого криминала не представляют, и
+никакого вреда/зависания не вызывают никогда.
+Зато они являются началом нормального BAT-файла.</p>
+
+<pre>    DB      F0,0F,C7,C8</pre>
+
+<p>; Если комп не завис - выход в дос.</p>
+
+<pre>    MOV     AX,4C00
+    INT     21</pre>
+
+<p>&nbsp;&nbsp; Если зделать замену</p>
+
+<pre>
+00000011:    F0    FA
+00000012:    0F    EB
+00000013:    C7    FD
+00000014:    C8    90</pre>
+
+<p>&nbsp;&nbsp; то получится другой способ зависания:
+вместо F0 0F C7 C8 будет</p>
+
+<pre>@L1:         cli
+             jmp   short @L1
+             nop
+</pre>
+
+<p>[продолжение следует]</p>
+
+<p align="center"><font color="#000000" face="Arial Cyr" size="3"><img src="../../../images/line_green.gif" width="90%" height="2"></font></p>
+
+<p align="center"><a href="../bugzzz.htm"><font color="#000000" face="Arial Cyr" size="3"><img src="../../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></font></a></p>
+</body>
+</html>

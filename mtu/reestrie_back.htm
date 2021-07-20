@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<title>Замена фона в IE</title>
+</head>
+
+<body aLink="#FF0000" bgColor="#FFFFFF" link="#0000FF" text="#000000" vLink="#0000FF">
+
+<p align="center"><font color="#0000FF"><big><big>Задание фона для
+панели инструменотов</big></big><br>
+<big><big>в Internet Explorer</big></big></font></p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+
+<p align="center">&nbsp;&nbsp;&nbsp; Вот, например, как это может
+выглядеть:</p>
+
+<p align="center"><img src="images/ieback_1.gif" WIDTH="319" HEIGHT="95"></p>
+
+<p>&nbsp;&nbsp;&nbsp; Прежде всего надо создать сам фон. Он
+представляет из себя картинку формата .bmp - 16 colors.
+Надо учитывать что в качестве прозрачного цвета
+будет использоваться светло-серый. В качестве
+системного контрастного - темно-серый. Вот пример
+такой картинки:</p>
+
+<p align="center"><img src="images/Ieback_2.gif" WIDTH="50" HEIGHT="48"></p>
+
+<p>&nbsp;&nbsp;&nbsp; Результат помещения ее в качестве
+фона на панель инструментов, показан выше...
+Теперь, надо поместить ее в доступную директорию.
+Например,&nbsp; в <font color="#800000"><strong>C:\WINDOWS\SYSTEM</strong></font>.
+И, для примера, назовем этот файл<font color="#800000"><strong>
+ie_back.bmp</strong></font><br>
+&nbsp;&nbsp;&nbsp; Запустите программу REGEDIT или подобную
+и проследуйте в раздел <font color="#800000"><strong>Hkey_Current_User\Software\Microsoft\Internet
+Explorer\Toolbar</strong></font>. Нам понадобится строковой
+параметр - <strong><font color="#800000">BackBitmap</font></strong>. Если
+там нет такого, то надо будет его создать.<br>
+&nbsp;&nbsp;&nbsp; Параметр <strong><font color="#800000">BackBitmap</font></strong>
+должен содержать путь к нашему фоновому рисунку.
+Для приводимого примера, установим этому
+параметру значение&nbsp; <font color="#800000"><strong>C:\WINDOWS\SYSTEM\ie_back.bmp</strong></font>.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Теперь перезапустите компьютер для
+того чтобы эти изменения вступили в силу.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Вот и все. Творческих успехов...</p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></p>
+</body>
+</html>

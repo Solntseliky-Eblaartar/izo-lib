@@ -1,0 +1,124 @@
+<html>
+
+<head>
+<title>Глумление над реестром. Стр. 4</title>
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+
+<p align="center"><font color="#008000"><big><big><big>Глумление над
+реестром</big><br>
+</big></big></font>Тут мы собираем всякую информацию о
+том, как заставить Windows подчиниться некоторым
+спецефическим настройкам, которые нельзя
+выполнить обычным путем. Конечно, большинство
+таких настроек можно выполнить при помощи
+программы Tweak Ul из пакета Power Toys или другой
+подобной программой. Однако иногда применение
+таких програм нежелательно. И тогда запускается
+родимый regedit и ручками вносятся изменения...</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p>&nbsp;&nbsp;&nbsp; Оговоримся сразу. Мы не являемся
+такими уж ушлыми спецами в этой области. Поэтому
+всецело пологаемся на наших пользователей. Если
+есть какие замечания или вы хотите добавить что
+нибудь, то... ну, короче, адрес наш тут в конце
+каждой странички есть - пишите.</p>
+
+<p align="center"><a href="winreg_1.htm">стр. 1</a> | <a href="winreg_2.htm">стр. 2</a>
+| <a href="winreg_3.htm">стр. 3</a> | <big>стр. 4</big></p>
+
+<p><big>Содержание:</big></p>
+
+<p align="left"><big>31</big>. <a href="#31.">Надоела картинка при
+запуске Outlook Express.</a><br>
+<big>32</big>. <a href="#32.">Имя рядом с системными часами.</a><br>
+<big>33</big>. <a href="#33.">Растягивание обоев на весь
+экран.</a><br>
+<big>34</big>. <a href="#34.">Как побороть глюки с иконками в
+Active Desktop...</a><br>
+<big>35</big>. <a href="#35.">Как отключить active desktop в win98. </a><br>
+[продолжение следует]</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p><big><a name="31.">31.</a> Надоела картинка при запуске
+Outlook Express.</big><br>
+<b>From: </b>Стаsик </p>
+
+<p>&nbsp;&nbsp;&nbsp; Если вам надоела картинка при
+запуске Outlook Express, то всё в том же реестре, по
+адресу HKEY_CURRENT_USER\Software\Microsoft\Outlook Express\ редактируем
+ключ &quot;NoSplash&quot; с &quot;0&quot;(картинка появляется) на
+&quot;1&quot;(картинки нет).</p>
+
+<p><big><a name="32.">32.</a> Имя рядом с системными часами.</big><br>
+<b>From: </b>Стаsик </p>
+
+<p>&nbsp;&nbsp;&nbsp; Если вы хотите, чтобы рядом с
+системными часами распологалось ваше имя, то в
+реестре по адресу HKEY_CURRENT_USER\Control panel\International\
+создаем 3 строковых параметра:<br>
+&quot;s1159&quot; со значением &quot;Ваше имя&quot;(не более 8
+символов)<br>
+&quot;s2359&quot; со значением &quot;такое же как и у
+первго&quot;<br>
+&quot;sTimeFormat&quot; со значением &quot;HH:mm:ss tt&quot;<br>
+Порядок следует соблюдать!<br>
+Перезагружаемся и любуемся.<br>
+&nbsp;&nbsp;&nbsp; Комментарий: если сделать так как
+описано, то имя, рядом с часами, будет
+фигурировать не только на панели в левом нижнем
+углу Рабочего стола, но и во всех программах
+которые запрашивают системное время, например в
+Outlook Express в графе &quot;Отправлено&quot; или
+&quot;Получено&quot; :-)</p>
+
+<p><big><a name="33.">33.</a> Растягивание обоев на весь
+экран.</big><br>
+<b>From: </b>Марковский Евгений (jeka)</p>
+
+<p>&nbsp;&nbsp;&nbsp; Если вы хотите, чтобы обои на вашем
+рабочем столе растягивалась на весь экран, то по
+адресу HKEY_CURRENT_USER\Control Panel\desktop\ в строковом
+параметре WallpaperStyle надо изменить значение на 2 (а
+чтобы они центрировались, на 0). Потом просто
+выберите в настройках экрана ваши обои и они
+растянуться.<br>
+</p>
+
+<p><big><a name="34.">34.</a> Как побороть глюки с иконками в
+Active Desktop.</big><br>
+<b>From: </b>Andrey</p>
+
+<p>&nbsp;&nbsp;&nbsp; Если вы используете Windows 95 + IE4.0 или
+Windows 98, то при включенном Active Desktop иногда бывают
+глюки с иконками в панели быстрого запуска и на
+рабочем столе. Коллективный разум сумел побороть
+это такой поправкой в реестре:<br>
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Explorer<br>
+&quot;MaxCachedIcons&quot;=&quot;1024&quot; (строковый параметр)<br>
+Число 1024 при необходимости может быть увеличено.</p>
+
+<p><big><a name="35.">35.</a> Как отключить active desktop в win98. </big><br>
+<b>From: </b>Sergey </p>
+
+<p>&nbsp;&nbsp;&nbsp; Чтобы отключить active desktop в win98 нужно в<br>
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer<br>
+добавить binary value 'NoActiveDesktop' из 4х байт - 01 00 00 00, и
+тогда из настроек экрана пропадут настройки active
+desktop.<br>
+Чтобы вообще отключить десктоп, нужно туда же
+добавить значение 'NoDesktop'=01 00 00 00</p>
+
+<p>[продолжение следует]</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a><a href="winreg_3.htm"><img src="../../images/btn_prev.gif" alt="Стр. 2" border="0" WIDTH="77" HEIGHT="38"></a></p>
+
+<p align="center"><a href="mailto:webdesign@mtu.ru"><img src="../../images/mailbox.gif" alt="Пишите нам" border="0" WIDTH="169" HEIGHT="36"></a></p>
+</body>
+</html>

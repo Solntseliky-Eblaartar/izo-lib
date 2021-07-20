@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<title>Смена символьной раскладки клавиатуры</title>
+</head>
+
+<body aLink="#FF0000" bgColor="#FFFFFF" link="#0000FF" text="#000000" vLink="#0000FF">
+
+<p align="center"><font color="#0000FF"><big><big>Смена символьной
+раскладки клавиатуры</big></big></font></p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+
+<p align="left"><strong>From:</strong> Victor Zabavin<br>
+<strong>Newsgroups:</strong> mtu.inform<br>
+<strong>Date:</strong> 15 июля 1998 г. 12:48</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp; Лично я делал это в два этапа:<br>
+&nbsp;&nbsp;&nbsp; 1. Открываем kbdru.kbd (или kbdru1.kbd, смотря
+какая у тебя раскладка) в Notepad'е (о том, что надо
+сделать перед этим резервную копию, я даже не
+пишу, это и так понятно). Находим там
+последовательность &quot;йцукен&quot;, по ней, я думаю,
+сориентируетесь. Исправляем, как нужно.
+Сохраняем.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp; 2.Открываем этот файл в DiskEditor'е
+и обнаруживаем (сравнив, например, с оригиналом)
+что Notepad заменил в начальной части файла коды
+&quot;00&quot; на &quot;20&quot; (т.е. на пробел).
+Соответственно, восстанавливаем как было, или
+вручную, или скопировав соответствующий
+фрагмент из резервной копии. Последнее, наверное,
+надежнее. Сохраняем.</p>
+
+<p align="left">&nbsp;&nbsp;&nbsp; Всё. После перезагрузки у нас
+исправленная раскладка. Можно, разумеется (и,
+возможно, правильнее), сделать это в один этап
+diskedit'ом (или hiew). Но сложнее находить нужные буквы.
+</p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></p>
+</body>
+</html>

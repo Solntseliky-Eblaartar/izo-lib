@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<title>Замена логотипа в IE</title>
+</head>
+
+<body aLink="#FF0000" bgColor="#FFFFFF" link="#0000FF" text="#000000" vLink="#0000FF">
+
+<p align="center"><font color="#0000FF"><big><big>Замена логотипа в
+Internet Explorer</big></big></font></p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+
+<table border="0" cellpadding="3">
+  <tr>
+    <td valign="top">&nbsp;&nbsp; Логотип по сути своей
+    представляет собой вертикальную
+    последовательность кадров-картинок в формате
+    BMP-256. Таких лент должно быть две. В одной кадры
+    должны быть 26х26 точек, в другой 38х38. Длина ленты (а
+    стало быть и количество кадров) может быть любой
+    длины. Важно лишь следить, чтобы длина ленты в
+    одном случае была кратной 26 точкам, в другом - 38.
+    Справа представлен пример (рис.1), как могут
+    выглядеть подобные линейки.<p>&nbsp;&nbsp; Разместите
+    оба файла в легкодоступном месте. Например в <font color="#800000"><strong>C:\WINDOWS\SYSTEM</strong></font>. Для примера
+    назовем эти файлы <font color="#800000"><strong>bg_logo.bmp</strong></font>
+    и <font color="#800000"><strong>sm_logo.bmp.</strong></font></p>
+    <p>&nbsp;&nbsp; Теперь запустите программу REEGEDIT или
+    подобную и проследуйте в раздел <font color="#800000"><strong>Hkey_Current_User\Software\Microsoft\Internet
+    Explorer\Toolbar</strong></font>. Нам нужны там два строковых
+    параметра - <strong><font color="#800000">BrandBitmap</font></strong> и <strong><font color="#800000">SmBrandBitmap</font></strong>. Если их там нет, то надо
+    будет их создать.<br>
+    <strong><font color="#800000">BrandBitmap</font></strong> должен содержать
+    путь к &quot;большому&quot; логотипу (в нашем случае <font color="#800000"><strong>C:\WINDOWS\SYSTEM\bg_logo.bmp</strong></font>).<br>
+    <strong><font color="#800000">SmBrandBitmap</font></strong> - путь к
+    &quot;маленькому&quot; логотипу ( <font color="#800000"><strong>C:\WINDOWS\SYSTEM\sm_logo.bmp</strong></font>).</p>
+    <p>&nbsp;&nbsp; Теперь перезапустите компьютер для того
+    чтобы эти изменения вступили в силу.</p>
+    <p>&nbsp;&nbsp; Вот и все. Творческих успехов...</p>
+    <p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></td>
+    <td valign="top" bgcolor="#808080"><p align="center"><strong><font color="#FFFFFF">(рис.1)</font></strong></p>
+    <p align="center"><img src="images/ielogo.gif" WIDTH="70" HEIGHT="1748"></td>
+  </tr>
+</table>
+</body>
+</html>

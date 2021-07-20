@@ -1,0 +1,265 @@
+<html>
+
+<head>
+<title>Глумление над реестром. Стр. 2</title>
+</head>
+
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+
+<p align="center"><font color="#008000"><big><big><big>Глумление над
+реестром</big><br>
+</big></big></font>Тут мы собираем всякую информацию о
+том, как заставить Windows подчиниться некоторым
+спецефическим настройкам, которые нельзя
+выполнить обычным путем. Конечно, большинство
+таких настроек можно выполнить при помощи
+программы Tweak Ul из пакета Power Toys или другой
+подобной программой. Однако иногда применение
+таких програм нежелательно. И тогда запускается
+родимый regedit и ручками вносятся изменения...</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p>&nbsp;&nbsp;&nbsp; Оговоримся сразу. Мы не являемся
+такими уж ушлыми спецами в этой области. Поэтому
+всецело пологаемся на наших пользователей. Если
+есть какие замечания или вы хотите добавить что
+нибудь, то... ну, короче, адрес наш тут в конце
+каждой странички есть - пишите.</p>
+
+<p align="center"><a href="winreg_1.htm">стр. 1</a> | <big>стр. 2</big> | <a href="winreg_3.htm">стр. 3</a> | <a href="winreg_4.htm">стр. 4</a></p>
+
+<p><big>Содержание:</big></p>
+
+<p align="left"><big>11</big>. <a href="winreg_2.htm#11">Как сделать тип
+файла &quot;Unknown&quot; видимым в диалоговом окне
+&quot;Типы файлов&quot;</a><br>
+<big>12</big>. <a href="winreg_2.htm#12">Чтобы создать специальную
+папку...(из секретов Мелкомягких)</a><br>
+<big>13.</big> <a href="winreg_2.htm#13">Хочу ещё спецпапок!!!!</a><br>
+<big>14.</big> <a href="winreg_2.htm#14">Создание новых обьектов в
+мышином меню «Файл»-&gt;«Создать»</a><br>
+<big>15.</big><small> </small><a href="winreg_2.htm#15">Как превратить
+иконки в миниатюрные картинки с изображением
+содержимого этих файлов</a>.<br>
+<big>16.</big> <a href="winreg_2.htm#16.">Средняя кнопка мышки.</a><br>
+<big>17.</big> <a href="winreg_2.htm#17.">Добавление &quot;новых&quot;
+действий в меню &quot;Файл&quot;</a><br>
+<big>18.</big> <a href="winreg_2.htm#18.">Автозапуск программ.</a><br>
+<big>19.</big> <a href="winreg_2.htm#19.">Изменение значков
+&quot;Корзины&quot;, &quot;Входящих&quot; и т.д.</a><br>
+<big>20.</big> <a href="winreg_2.htm#20.">Обновление содержимого
+окна Проводника</a><br>
+[продолжение на <a href="winreg_3.htm">странице 3</a>]</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p><big><a name="11">11.</a> Как сделать тип файла &quot;Unknown&quot;
+видимым в диалоговом окне &quot;Типы файлов&quot;</big><br>
+<b>From: </b>ILja.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Откройте редактор реестра и
+разверните раздел &quot;HKEY_ CL\SSES_ROOT&quot;.<br>
+&nbsp;&nbsp;&nbsp; Прокручивайте список типов файлов до
+тех пор, пока не найдете &quot;Unknown&quot;.<br>
+&nbsp;&nbsp;&nbsp; Выделите его, переведите курсор в
+правое окно редактора и щелкните правой кнопкой
+мыши в произвольном месте.<br>
+&nbsp;&nbsp;&nbsp; Выберите пункт &quot;Новый&quot; из
+появившегося контекстного меню, затем элемент
+&quot;Двоичное значение&quot;. Будет видно, что
+выделено &quot;Новое значение #1&quot;. <br>
+&nbsp;&nbsp;&nbsp; Замените эту метку-заполнитель словом
+&quot;EditFlags&quot;.<br>
+&nbsp;&nbsp;&nbsp; Щелкните дважды на пиктограмме
+&quot;EditFlags&quot; и введите следующую строку в поле
+&quot;Значение&quot; диалога &quot;Редактирование&quot;: 02
+00 00 00. (При обращении к этому полю в нем
+обнаружатся четыре нуля, удалить которые
+невозможно. Введенные вами цифры прибавятся к
+ним.) <br>
+&nbsp;&nbsp;&nbsp; Закройте Registry Editor. Теперь можно
+увидеть элемент &quot;Unknown&quot; среди типов файлов в
+&quot;Проводнике&quot;. Этот метод применим к любым
+другим неизвестным типам файлов.</p>
+
+<p><big><a name="12">12</a>.</big> <big>Чтобы создать специальную
+папку...(из секретов Мелкомягких)</big><br>
+<b>From: </b>ILja.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Щелкните правой кнопкой мыши на
+рабочем столе или внутри папки (лучше), выберите
+пункты «Создать» и «Папка». <br>
+&nbsp;&nbsp;&nbsp; Дайте новому объекту имя и поставьте
+после него точку, после чего введите
+идентификатор класса объекта (CLSID) в фигурных
+скобках.<br>
+&nbsp;&nbsp;&nbsp; Например, для «Панели управления»
+полное имя папки будет выглядеть таким образом:
+&quot;Панель мучений.{21EC2020-3AEA-1069-A2DD-08002B30309D}&quot;. Имя
+перед точкой можно давать по собственному
+усмотрению. Объект идентифицируется как
+специальная папка точкой и идентификатором
+CLSID.Не забудьте поставить фигурные
+скобки!(попробуйте поместить или создать такую
+папку в &quot;с:\Windows\Главное меню\&quot;, и нажать на
+кнопку &quot;Пуск&quot;, увидите что получится...... ;-))) )</p>
+
+<p><big><a name="13">13</a>. Хочу ещё спецпапок!!!!<br>
+</big><b>From: </b>ILja.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Открываете в REGEDIT раздел
+&quot;HKLM\Software\CLASSES\CLSID&quot; и выделяете его мышью. <br>
+&nbsp;&nbsp;&nbsp; Запускаете в REGEDIT поиск и ищете строку
+&quot;InfoTip&quot; <br>
+&nbsp;&nbsp;&nbsp; Найдя интересный инфотип (например
+&quot;Удалённый доступ&quot;) , смотрите на название
+вышестоящей по иерархии папки(что-то вроде
+&quot;{????????-????-????-????-????????????}&quot;)&nbsp; создаёте папку с
+любым именем, точкой и этим идентификатором типа
+Name.{????????-????-????-????-????????????}<br>
+&nbsp;&nbsp;&nbsp; Юзаете спецпапку....(Виндовс глюкав,
+поэтому не со всеми CLSID это получается ;-))</p>
+
+<p><big><a name="14">14</a>. Создание новых обьектов в
+мышином меню «Файл»-&gt;«Создать»<br>
+</big><b>From: </b>ILja.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Создать пустые файлы с нужными
+расширениями и поместить их в папку «\Windows\ShellNew».<br>
+&nbsp;&nbsp;&nbsp; Запустить regedit.exe и обратившись к ключу
+HKEY_CLASSES_ROOT, найти нужное расширение файла. Выбрав
+его, нажать правую кнопку мыши и добавить новую
+группу, назвав ее «ShellNew».<br>
+&nbsp;&nbsp;&nbsp; В правом окне редактора щелкнуть
+правой кнопкой мыши по фоновому изображению и
+добавить новый строковый параметр.<br>
+&nbsp;&nbsp;&nbsp; Назвав его «FileName», дважды щелкнуть на
+пиктограмме в окне «Редактировать строку» и
+ввести имя пустого файла, помещенного вами в
+папку «\Windows\ShellNew».<br>
+&nbsp;&nbsp;&nbsp; Закрыть Registry Editor.</p>
+
+<p><big><a name="15">15</a>. Как превратить иконки BMP-файлов в
+миниатюрные картинки</big><br>
+<big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; с изображением содержимого
+этих файлов.<br>
+</big><b>From: </b>ILja.</p>
+
+<p>&nbsp;&nbsp;&nbsp; Откройте раздел реестра «HKEY_CLASSES_ROOT»,
+разверните в нем папку «Paint. Picture» и выберите
+«Defaulticon».<br>
+&nbsp;&nbsp;&nbsp; Дважды щелкнув на правом окне,
+откройте диалог «Изменение строкового
+параметра», удалите его содержимое и введите
+&quot;%1&quot;. Тоже самое и ещё кое-что полезное делает
+и Winhacker 95. v1.1(с этой версией меньше проблем, чем со
+второй)</p>
+
+<p><big><a name="16.">16.</a> Средняя кнопка мышки.</big><br>
+<strong>From:</strong> рассылка List SOFT</p>
+
+<p>&nbsp;&nbsp;&nbsp; Если у вас стоит драйвер мыши Logitech
+(для подавляющего большинства мышей винда ставит
+именно этот драйвер), то на среднюю клавишу мыши
+(которая по умолчанию не используется) можно
+назначить например функцию Double click. Для этого
+нужно в реестре в ключе
+HKLM\SOFTWARE\Logitech\MouseWare\CurrentVersion\SerialV\DoubleClick прописать
+значение &quot;001&quot;.<br>
+&nbsp;&nbsp;&nbsp; Кстати, если Вы туда запишете значение
+&quot;110&quot; то Double click будет срабатывать на
+одновременное нажатие левой и правой клавиш.</p>
+
+<p>&nbsp;&nbsp;&nbsp; С прочими извращения с кнопками
+мышки вы можете <a href="../hardw-comp/dbl_mouse.htm">ознакомиться
+здесь</a>.</p>
+
+<p><big><a name="17.">17.</a> Добавление новых &quot;действий&quot;
+в меню &quot;Файл&quot;.</big><br>
+<strong>From:</strong> рассылка List SOFT</p>
+
+<p>&nbsp;&nbsp;&nbsp; WinRAR - очень хороший архиватор
+(субъективное мнение :). Но у него есть один
+недостаток. Возможно поэтому, большинство
+предпочитают пользоваться WinZip. Чтобы сжать какой
+либо файл с помощью WinRAR, нужно открывать
+Start-&gt;Program Files-&gt;WinRAR-&gt;WinRAR или кликнуть его иконку
+на десктопе. Потом выбрать путь, того файла,
+который вы хотите сжать... В WinZip такой рутины нет.
+Достаточно в Explorer кликнуть на нужном файле и
+добавить его в zip архив.<br>
+&nbsp;&nbsp;&nbsp; Но этот недостаток можно исправить.
+Запустите Regedit.exe. В реестре HKEY_CLASSES_ROOT\* создайте
+навый ключ:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+HKEY_CLASSES_ROOT\*\shell\open<br>
+&nbsp;&nbsp;&nbsp; кликните справа (Standart) и напишите: Add to
+&amp;RAR<br>
+&nbsp;&nbsp;&nbsp; Затем добавьте в HKEY_CLASSES_ROOT\*\shell\open ещё
+один ключ: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+HKEY_CLASSES_ROOT\*\shell\open\command <br>
+&nbsp;&nbsp;&nbsp; справа введите путь: C:\Programme\WinRAR\winrar95.exe
+&quot;%1&quot;</p>
+
+<p><big><a name="18.">18.</a> Автозапуск программ из файла
+реестра</big><br>
+<strong>From:</strong> Jim</p>
+
+<p>&nbsp;&nbsp;&nbsp; Как известно, автозапуск программ
+производится из папки &quot;Автозагрузка&quot; в меню
+&quot;Пуск&quot;. Однако, файл реестра тоже, весьма
+неплохо справляется с этой задачей.<br>
+&nbsp;&nbsp;&nbsp; HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run&quot;-
+в этом разделе могут содержится программы,
+которые автоматически запускаются при старте
+Windows.<br>
+&nbsp;&nbsp;&nbsp; Помимо HKEY_LOCAL_MACHINE, подраздел
+\SOFTWARE\Microsoft\Windows\CurrentVersion\Run имеет смысл поискать в
+HKEY_USERS:<br>
+&nbsp;&nbsp;&nbsp; HKEY_USERS\.Default\<br>
+&nbsp;&nbsp;&nbsp; или HKEY_USERS\&lt;логин при входе&gt;</p>
+
+<p><big><a name="19.">19.</a> Изменение значков
+&quot;Корзины&quot;, &quot;Входящие&quot; и т.д.</big><br>
+<strong>From:</strong> Alex Mokhovoy</p>
+
+<p>&nbsp;&nbsp;&nbsp; На примере изменения значка
+&quot;Корзины&quot;. Необходимо пеpебpаться в pаздел
+pеестpа:<br>
+&nbsp;&nbsp;&nbsp;
+HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B9F08-00AA002F954E}\DefaultIcon<br>
+и изменить значение паpаметpа Empty и Full на путь к
+вашему файлу значка. Кстати цифpа после имени
+файла означает номеp значка с файле, так напpимеp
+c:\Windows\System\Shell32.dll,15 означает 15ый значек из
+библиотеки иконок Shell32.dll. Если же вы используете
+файл *.ICO то надо пpосто поставить после имени
+файла значение 0.</p>
+
+<p>Вот CLSID для некоторых других пиктогpамм:</p>
+
+<p>{20D04FE0-3AEA-1069-A2D8-08002B30309D} - &quot;Мой компьютеp&quot;<br>
+{208D2C60-3AEA-1069-A2D7-08002B30309D} - &quot;Сетевое окpужение&quot;<br>
+{00020D75-0000-0000-C000-000000000046} - &quot;Входящие&quot;<br>
+{00028B00-0000-0000-C000-000000000046} - &quot;The Microsoft Network&quot;<br>
+{FBF23B42-E3F0-101B-8488-00AA003E56F8} - &quot;Пpоводник&quot;</p>
+
+<p><big><a name="20.">20.</a> Обновление содержимого окна
+Проводника</big></p>
+
+<p>&nbsp;&nbsp;&nbsp; Чтобы обновление содержимого окна
+Проводника происходило автоматически, а не по
+нажатию кнопки F5, в реестре нужно найти ключ
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Update и изменить
+значение величины UpdateMode с 01 на 00. <br>
+</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a><a href="winreg_1.htm"><img src="../../images/btn_prev.gif" alt="Стр. 1" border="0" WIDTH="77" HEIGHT="38"></a><a href="winreg_3.htm"><img src="../../images/btn_next.gif" alt="Стр. 3" border="0" WIDTH="77" HEIGHT="38"></a></p>
+
+<p align="center"><a href="mailto:webdesign@mtu.ru"><img src="../../images/mailbox.gif" alt="Пишите нам" border="0" WIDTH="169" HEIGHT="36"></a></p>
+</body>
+</html>

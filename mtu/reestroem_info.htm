@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<title>Windows'95. OEM Info</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+
+<p align="center"><font color="#008000"><big><big><big>OEM Info</big><br>
+</big></big></font>О том, как добавить персональную
+информацию о компьютере (такую как - модель
+название и сведения о тех.поддержке) в раздел
+системной информации в панели управления.</p>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+<div align="center"><center>
+
+<table border="0" cellpadding="5" width="100%">
+  <tr>
+    <td width="100%" valign="top">Для того чтобы добавить какие
+    либо сведения и картинку в раздел системной
+    информации, как показанно на рис.1, необходимо
+    создать в директории Windows\System файл с именем <font color="#FF0000"><em><strong>oeminfo.ini</strong></em></font> следующего
+    содержания:<pre><strong>[General]</strong>
+Manufacturer=&quot;&lt;производитель&gt;&quot;
+Model=&quot;&lt;название модели&gt;&quot;
+<strong>[Support Information]</strong>
+Line1=&quot;&lt;информация&quot;
+Line2=&quot;о технической&quot;
+Line3=&quot;поддержке&gt;&quot;
+Line4=&quot;...&quot;
+Line5=&quot;...&quot;
+Line6=&quot;...&quot;
+и т.д. столько линий - сколько нужно</pre>
+    <p>Теперь, чтобы поместить картинку-эмблему надо,
+    туда же - в директорию&nbsp; Windows\System поместить
+    графический bmp-файл размера 127х127 с именем <font color="#FF0000"><strong><em>oemlogo.bmp</em></strong></font></p>
+    <p><font color="#000000">Теперь вызовите &quot;Мой
+    компьютер&quot;-&quot;Cвойства&quot; или пункт
+    &quot;Cистема&quot; в панели управления и увидите
+    результат своей работы</font></td>
+    <td width="210" align="center"><img src="images/oem_info.gif" WIDTH="206" HEIGHT="224"><br>
+    <small>рис.1</small></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center"><img src="../../images/line_green.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></p>
+</body>
+</html>

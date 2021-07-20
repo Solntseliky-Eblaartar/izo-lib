@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>Windows OSR2 и MS-DOS 6.22</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+
+<p align="center"><font color="#800000"><big><big>Windows OSR2 и MS-DOS 6.22</big></big><br>
+<big><big>наконец-то подружились...</big></big></font></p>
+
+<p align="center"><img src="../../images/line_red.gif" width="90%" height="2"></p>
+
+<p><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><big>W</big></big>indows OSR2 и MS-DOS
+6.22 наконец-то подружились ;-)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><big>П</big></big>роблемма
+&quot;нехождения&quot; OSR2 в DOS по F4 наконец то
+полностью решена. И хотя уже давно есть различные
+патчи на эту тему, их применение иногда чревато
+проблемами. Один самых ранних патчей крахнул мне
+систему (на винте вдруг появилось 300 МВ сбойных
+кластеров, только FDISK и помог ;-).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><big>Т</big></big>акого больше
+не будет! OSR2 будет дружить с MS-ДОСом (если конечно
+не установлена FAT32). Надо лишь добавить несколько
+строчек в AUTOEXEC.DOS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><big>Н</big></big>е буду
+объяснять причину &quot;нехождения&quot; OSR2 в DOS по F4
+(она ОЧЕНЬ проста) и видна по наженаписанному
+примеру файла AUTOEXEC.DOS:</p>
+
+<p><font face="Courier"><font color="#0000FF">@ECHO Off<br>
+SET TEMP=C:\TEMP<br>
+PATH C:\SYSTEM;C:\DOS;C:\NC<br>
+...........................<br>
+...........................<br>
+...........................<br>
+attrib -s -h -r c:\io.sys<br>
+ren c:\io.sys io.dos<br>
+attrib +s +h +r c:\io.dos<br>
+attrib -s -h -r c:\winboot.sys<br>
+ren c:\winboot.sys io.sys<br>
+attrib +s +h +r c:\io.sys</font><br>
+</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><big>З</big></big>агрузившись
+в Win95 (важно!) , добавьте последние 6 строчек ,(
+порядке как они написаны),из данного примера
+файла ,в свой AUTOEXEC.DOS и все, можно идти в ДОС по F4.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><big>З</big></big>амечание:
+Нортон или Волков , должны грузится после этих
+строк. Вся эта &quot;махинация&quot;, уже проверена -
+работает как часы. Хотя я&nbsp; не несу никакой
+ответственности за любые.... ну и так далее ;-)<br>
+<br>
+P.S. Повторяю, FAT32 не должен быть установлен за
+загрузочном диске.</p>
+
+<p><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regards<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Andser</p>
+
+<p align="center"><img src="../../images/line_red.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></p>
+</body>
+</html>

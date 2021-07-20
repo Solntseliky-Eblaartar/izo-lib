@@ -1,0 +1,159 @@
+<html>
+
+<head>
+<title>MsDos.Sys</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#FF0000">
+
+<p align="center"><font color="#0000FF"><big><big>MsDos.Sys</big></big><br>
+</font>Описание параметров.</p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+<div align="center"><center>
+
+<table border="0" cellpadding="3" width="95%">
+  <tr>
+    <td colspan="2" valign="top">Секция [Paths]:</td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">HostWinBootDrv </td>
+    <td valign="top" bgcolor="#F2F2F2">Определяет загрузочный диск </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">WinBootDir </td>
+    <td valign="top" bgcolor="#F2F2F2">Определяет расположение
+    необходимых загрузочных файлов. По умолчанию
+    каталог, указанный при установке </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">WinDir </td>
+    <td valign="top" bgcolor="#F2F2F2">Определяет расположение
+    каталога Windows 95, указанного при установке </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">&nbsp; <br>
+    Секция [Options]:</td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootDelay=n </td>
+    <td valign="top" bgcolor="#F2F2F2">Устанавливает задержку в n
+    секунд при загрузке для того, чтобы дать
+    пользователю нажать F4,F8. <br>
+    Значение по умолчанию 2. BootDelay = 0 запрещает
+    задержку. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootSafe </td>
+    <td valign="top" bgcolor="#F2F2F2">Загрузка в Safe Mode. <br>
+    Значение по умолчанию 0. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootGUI </td>
+    <td valign="top" bgcolor="#F2F2F2">Загрузка с графической
+    средой. <br>
+    Значение по умолчанию 1. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootKeys </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает пользоваться при
+    загрузке клавишами F5, F6 и F8. <br>
+    Значение по умолчанию 1. Установка в 0 запрещает
+    задержку при загрузке. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootMenu </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает автоматический
+    вывод Windows 95 Startup menu. <br>
+    Значение по умолчанию 0. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootMenuDefault=# </td>
+    <td valign="top" bgcolor="#F2F2F2">Выбирает пункт в загрузочном
+    меню. <br>
+    Значение по умолчанию 3 для компьютеров без
+    сетевых компонент и 4 для сетевых компьютеров. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootMenuDelay=# </td>
+    <td valign="top" bgcolor="#F2F2F2">Время, в течение которого
+    можно успеть сделать выбор в загрузочном меню. <br>
+    Значение по умолчанию 30. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootMulti </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает загрузку
+    предыдущей версии DOS при нажатии F4 либо при
+    выборе соответствующего пункта из загрузочного
+    меню.<br>
+    Значение по умолчанию 0. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootWarn </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает предупреждение о
+    загрузке в Safe Mode. <br>
+    Значение по умолчанию 1. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">BootWin </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает использование Windows
+    95 в качестве операционной системы по умолчанию.
+    Установка этого параметра в 0 приведет к загрузке
+    предыдущей версии DOS. <br>
+    Значение по умолчанию 1. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">DblSpace </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает автоматическую
+    загрузку Dblspace.Bin. <br>
+    Значение по умолчанию 1. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">DoubleBuffer </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает двойную
+    буферизацию для SCSI-контроллеров. <br>
+    Значение по умолчанию 0. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">DrvSpace </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает автоматическую
+    загрузку Drvspace.Bin. <br>
+    Значение по умолчанию 1. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">LoadTop </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает загрузку Command.Com или
+    Drvspace.Bin в верхнюю память <br>
+    Значение по умолчанию 1. Рекомендуется
+    устанавливать в 0 при работе с NetWare или любым
+    софтом, имеющим личное мнение об использовании
+    данных областей памяти. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">Logo </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает показывать логотип.
+    <br>
+    Значение по умолчанию 1. Установка в 0 также
+    предотвращает перехват некоторых прерываний,
+    который может привести к несовместимости с
+    некоторыми диспетчерами памяти от независимых
+    поставщиков. </td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#DDDDDD">Network </td>
+    <td valign="top" bgcolor="#F2F2F2">Разрешает пункт загрузочного
+    меню “Safe Mode With Networking”. <br>
+    Значение по умолчанию 1 для сетевых компьютеров.
+    Должно быть установлено в 0 при отсутствии
+    сетевой поддержки. </td>
+  </tr>
+</table>
+</center></div>
+
+<p>Прислал Alex Mokhovoy &lt;<a href="mailto:wanderfly@mtu-net.ru">wanderfly@mtu-net.ru</a>&gt;</p>
+
+<p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
+
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></p>
+</body>
+</html>
