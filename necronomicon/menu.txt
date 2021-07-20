@@ -1,13 +1,13 @@
-<html>
+п»ї<html>
 <head>
-<title>Документ с Меню</title>
+<title>Р”РѕРєСѓРјРµРЅС‚ СЃ РњРµРЅСЋ</title>
 <body background="cherti3.gif" text="#ffffff" link="#ffffff" alink="#ffffff" vlink="#ffffff">
 <center>
-<a href="content.html" target="window-1">Главная</a>
-<a href="tumki.html" target="window-1">Тумки</a>
-<a href="bumki.html" target="window-1">Бумки</a>
-<a href="tururumki.html" target="window-1">Турурумки</a>
-<a href="tra-la-la.html" target="window-1">Траляля</a> 
+<a href="content.html" target="window-1">Р“Р»Р°РІРЅР°СЏ</a>
+<a href="tumki.html" target="window-1">РўСѓРјРєРё</a>
+<a href="bumki.html" target="window-1">Р‘СѓРјРєРё</a>
+<a href="tururumki.html" target="window-1">РўСѓСЂСѓСЂСѓРјРєРё</a>
+<a href="tra-la-la.html" target="window-1">РўСЂР°Р»СЏР»СЏ</a> 
 </center>
 </body>
 </head>

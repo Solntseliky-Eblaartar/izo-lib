@@ -1,54 +1,54 @@
-<html>
+п»ї<html>
 
 <head>
-<title>Замена фона в IE</title>
+<title>Р—Р°РјРµРЅР° С„РѕРЅР° РІ IE</title>
 </head>
 
 <body aLink="#FF0000" bgColor="#FFFFFF" link="#0000FF" text="#000000" vLink="#0000FF">
 
-<p align="center"><font color="#0000FF"><big><big>Задание фона для
-панели инструменотов</big></big><br>
-<big><big>в Internet Explorer</big></big></font></p>
+<p align="center"><font color="#0000FF"><big><big>Р—Р°РґР°РЅРёРµ С„РѕРЅР° РґР»СЏ
+РїР°РЅРµР»Рё РёРЅСЃС‚СЂСѓРјРµРЅРѕС‚РѕРІ</big></big><br>
+<big><big>РІ Internet Explorer</big></big></font></p>
 
 <p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
 
-<p align="center">&nbsp;&nbsp;&nbsp; Вот, например, как это может
-выглядеть:</p>
+<p align="center">&nbsp;&nbsp;&nbsp; Р’РѕС‚, РЅР°РїСЂРёРјРµСЂ, РєР°Рє СЌС‚Рѕ РјРѕР¶РµС‚
+РІС‹РіР»СЏРґРµС‚СЊ:</p>
 
 <p align="center"><img src="images/ieback_1.gif" WIDTH="319" HEIGHT="95"></p>
 
-<p>&nbsp;&nbsp;&nbsp; Прежде всего надо создать сам фон. Он
-представляет из себя картинку формата .bmp - 16 colors.
-Надо учитывать что в качестве прозрачного цвета
-будет использоваться светло-серый. В качестве
-системного контрастного - темно-серый. Вот пример
-такой картинки:</p>
+<p>&nbsp;&nbsp;&nbsp; РџСЂРµР¶РґРµ РІСЃРµРіРѕ РЅР°РґРѕ СЃРѕР·РґР°С‚СЊ СЃР°Рј С„РѕРЅ. РћРЅ
+РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ РёР· СЃРµР±СЏ РєР°СЂС‚РёРЅРєСѓ С„РѕСЂРјР°С‚Р° .bmp - 16 colors.
+РќР°РґРѕ СѓС‡РёС‚С‹РІР°С‚СЊ С‡С‚Рѕ РІ РєР°С‡РµСЃС‚РІРµ РїСЂРѕР·СЂР°С‡РЅРѕРіРѕ С†РІРµС‚Р°
+Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ СЃРІРµС‚Р»Рѕ-СЃРµСЂС‹Р№. Р’ РєР°С‡РµСЃС‚РІРµ
+СЃРёСЃС‚РµРјРЅРѕРіРѕ РєРѕРЅС‚СЂР°СЃС‚РЅРѕРіРѕ - С‚РµРјРЅРѕ-СЃРµСЂС‹Р№. Р’РѕС‚ РїСЂРёРјРµСЂ
+С‚Р°РєРѕР№ РєР°СЂС‚РёРЅРєРё:</p>
 
 <p align="center"><img src="images/Ieback_2.gif" WIDTH="50" HEIGHT="48"></p>
 
-<p>&nbsp;&nbsp;&nbsp; Результат помещения ее в качестве
-фона на панель инструментов, показан выше...
-Теперь, надо поместить ее в доступную директорию.
-Например,&nbsp; в <font color="#800000"><strong>C:\WINDOWS\SYSTEM</strong></font>.
-И, для примера, назовем этот файл<font color="#800000"><strong>
+<p>&nbsp;&nbsp;&nbsp; Р РµР·СѓР»СЊС‚Р°С‚ РїРѕРјРµС‰РµРЅРёСЏ РµРµ РІ РєР°С‡РµСЃС‚РІРµ
+С„РѕРЅР° РЅР° РїР°РЅРµР»СЊ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ, РїРѕРєР°Р·Р°РЅ РІС‹С€Рµ...
+РўРµРїРµСЂСЊ, РЅР°РґРѕ РїРѕРјРµСЃС‚РёС‚СЊ РµРµ РІ РґРѕСЃС‚СѓРїРЅСѓСЋ РґРёСЂРµРєС‚РѕСЂРёСЋ.
+РќР°РїСЂРёРјРµСЂ,&nbsp; РІ <font color="#800000"><strong>C:\WINDOWS\SYSTEM</strong></font>.
+Р, РґР»СЏ РїСЂРёРјРµСЂР°, РЅР°Р·РѕРІРµРј СЌС‚РѕС‚ С„Р°Р№Р»<font color="#800000"><strong>
 ie_back.bmp</strong></font><br>
-&nbsp;&nbsp;&nbsp; Запустите программу REGEDIT или подобную
-и проследуйте в раздел <font color="#800000"><strong>Hkey_Current_User\Software\Microsoft\Internet
-Explorer\Toolbar</strong></font>. Нам понадобится строковой
-параметр - <strong><font color="#800000">BackBitmap</font></strong>. Если
-там нет такого, то надо будет его создать.<br>
-&nbsp;&nbsp;&nbsp; Параметр <strong><font color="#800000">BackBitmap</font></strong>
-должен содержать путь к нашему фоновому рисунку.
-Для приводимого примера, установим этому
-параметру значение&nbsp; <font color="#800000"><strong>C:\WINDOWS\SYSTEM\ie_back.bmp</strong></font>.</p>
+&nbsp;&nbsp;&nbsp; Р—Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ REGEDIT РёР»Рё РїРѕРґРѕР±РЅСѓСЋ
+Рё РїСЂРѕСЃР»РµРґСѓР№С‚Рµ РІ СЂР°Р·РґРµР» <font color="#800000"><strong>Hkey_Current_User\Software\Microsoft\Internet
+Explorer\Toolbar</strong></font>. РќР°Рј РїРѕРЅР°РґРѕР±РёС‚СЃСЏ СЃС‚СЂРѕРєРѕРІРѕР№
+РїР°СЂР°РјРµС‚СЂ - <strong><font color="#800000">BackBitmap</font></strong>. Р•СЃР»Рё
+С‚Р°Рј РЅРµС‚ С‚Р°РєРѕРіРѕ, С‚Рѕ РЅР°РґРѕ Р±СѓРґРµС‚ РµРіРѕ СЃРѕР·РґР°С‚СЊ.<br>
+&nbsp;&nbsp;&nbsp; РџР°СЂР°РјРµС‚СЂ <strong><font color="#800000">BackBitmap</font></strong>
+РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ РїСѓС‚СЊ Рє РЅР°С€РµРјСѓ С„РѕРЅРѕРІРѕРјСѓ СЂРёСЃСѓРЅРєСѓ.
+Р”Р»СЏ РїСЂРёРІРѕРґРёРјРѕРіРѕ РїСЂРёРјРµСЂР°, СѓСЃС‚Р°РЅРѕРІРёРј СЌС‚РѕРјСѓ
+РїР°СЂР°РјРµС‚СЂСѓ Р·РЅР°С‡РµРЅРёРµ&nbsp; <font color="#800000"><strong>C:\WINDOWS\SYSTEM\ie_back.bmp</strong></font>.</p>
 
-<p>&nbsp;&nbsp;&nbsp; Теперь перезапустите компьютер для
-того чтобы эти изменения вступили в силу.</p>
+<p>&nbsp;&nbsp;&nbsp; РўРµРїРµСЂСЊ РїРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ РєРѕРјРїСЊСЋС‚РµСЂ РґР»СЏ
+С‚РѕРіРѕ С‡С‚РѕР±С‹ СЌС‚Рё РёР·РјРµРЅРµРЅРёСЏ РІСЃС‚СѓРїРёР»Рё РІ СЃРёР»Сѓ.</p>
 
-<p>&nbsp;&nbsp;&nbsp; Вот и все. Творческих успехов...</p>
+<p>&nbsp;&nbsp;&nbsp; Р’РѕС‚ Рё РІСЃРµ. РўРІРѕСЂС‡РµСЃРєРёС… СѓСЃРїРµС…РѕРІ...</p>
 
 <p align="center"><img src="../../images/line_blue.gif" width="90%" height="2"></p>
 
-<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="Основная страничка" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="Маленькие хитрости" border="0" WIDTH="77" HEIGHT="38"></a></p>
+<p align="center"><a href="../../index.htm"><img src="../../images/btn_home.gif" alt="РћСЃРЅРѕРІРЅР°СЏ СЃС‚СЂР°РЅРёС‡РєР°" border="0" WIDTH="76" HEIGHT="38"></a><a href="../../helps.htm"><img src="../../images/btn_section.gif" alt="РњР°Р»РµРЅСЊРєРёРµ С…РёС‚СЂРѕСЃС‚Рё" border="0" WIDTH="77" HEIGHT="38"></a></p>
 </body>
 </html>
